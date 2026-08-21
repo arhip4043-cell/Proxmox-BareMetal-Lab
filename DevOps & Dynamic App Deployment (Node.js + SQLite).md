@@ -20,6 +20,8 @@ Il deployment è stato eseguito creando un nuovo Stack su Portainer:
 * **Image Optimization:** Utilizzo dell'immagine ufficiale `node:alpine`. La scelta della distribuzione *Alpine Linux* (basata su `musl libc` e `BusyBox`) riduce drasticamente l'impronta in RAM e la superficie d'attacco rispetto alle immagini Node.js standard.
 * **Network Mapping:** Isolamento dell'applicativo esponendo la porta interna `4000` del container sulla porta custom `8085` dell'host.
 
+![Specifiche hardware del router](https://github.com/arhip4043-cell/Proxmox-BareMetal-Lab/blob/main/ServerWeb.png?raw=true)
+
 ### Storage & Permission Management
 Essendo SQLite un database basato su file singolo, richiedeva l'accesso in scrittura sul filesystem dell'host (Bind Mount). Le rigide policy di sicurezza di Debian bloccavano il container.
 * **Fix Operativo:** Modifica dei permessi Unix (`chmod -R 777`) sulla directory del progetto per consentire all'utente del container Docker di eseguire le operazioni di I/O sul file `database.sqlite`.
