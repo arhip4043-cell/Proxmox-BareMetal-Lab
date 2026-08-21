@@ -28,5 +28,5 @@ La sfida principale per l'erogazione di un Password Manager è l'esposizione sic
 ### 4. Il Payload: Vaultwarden
 Al centro dello stack è stato deployato **Vaultwarden**, implementazione alternativa dell'API di Bitwarden scritta in *Rust* per garantire estrema leggerezza computazionale e sicurezza della memoria (Memory Safety). 
 
-## 🛡️ Risultato Forense e di Sicurezza
+## Risultato Finale
 L'istanza è ora raggiungibile in HTTPS puro. Lo stack operativo risulta completamente invisibile a scanner perimetrali esterni (es. Shodan / Nmap mass-scans) poiché non espone porte fisiche su Internet, azzerando il rischio di vulnerabilità legate a servizi esposti.
